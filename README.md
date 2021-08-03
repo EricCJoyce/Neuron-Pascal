@@ -14,8 +14,11 @@ cd fpc-3.2.0-x86_64-linux
 ./install.sh
 ```
 Answer `/usr/local` to whether you want to install to `/usr` or `/usr/local`.
+
 Answer `Y` to "Install documentation?"
+
 Answer `Y` to "Install demos?"
+
 Tap `Enter` to put the demos in `/usr/local/share/doc/fpc-3.2.0/examples`
 
 Check your installation by issuing the following command:
