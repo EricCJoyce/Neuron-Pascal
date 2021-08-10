@@ -25,7 +25,7 @@ Check your installation by issuing the following command:
 ```
 fpc -iV
 ```
-Helpful videos on Pascal programming [here](https://wiki.freepascal.org/Free_Pascal_videos)
+[Helpful videos on Pascal programming](https://wiki.freepascal.org/Free_Pascal_videos).
 
 ### [cblas](https://github.com/clairvoyant/cblas)
 (t.b.c)
