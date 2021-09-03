@@ -256,8 +256,8 @@ begin
 
     result := 0;
     for i := 0 to layer.nodes - 1 do
-        result += (floor((layer.inputW - layer.filters[i].w + 1) / layer.filters[i].stride_h) *
-                   floor((layer.inputH - layer.filters[i].h + 1) / layer.filters[i].stride_v));
+        result += ( (floor((layer.inputW - layer.filters[i].w) / layer.filters[i].stride_h) + 1) *
+                    (floor((layer.inputH - layer.filters[i].h) / layer.filters[i].stride_v) + 1) );
 end;
 
 { Run the given input vector 'x' of length 'layer'.'inputW' * 'layer'.'inputH' through the Conv2DLayer 'layer'.
@@ -286,8 +286,8 @@ begin
     begin
         c := 0;
         softmaxdenom := 0.0;
-        filterOutputLen := (floor((layer.inputW - layer.filters[i].w + 1) / layer.filters[i].stride_h) *
-                            floor((layer.inputH - layer.filters[i].h + 1) / layer.filters[i].stride_v));
+        filterOutputLen := ( (floor((layer.inputW - layer.filters[i].w) / layer.filters[i].stride_h) + 1) *
+                             (floor((layer.inputH - layer.filters[i].h) / layer.filters[i].stride_v) + 1) );
         SetLength(cache, filterOutputLen);
 
         y := 0;
